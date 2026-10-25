@@ -1,0 +1,2 @@
+Faster R-CNN ResNet50-FPN
+YOLOv8s

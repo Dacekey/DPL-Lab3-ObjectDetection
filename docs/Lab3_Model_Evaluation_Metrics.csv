@@ -1,0 +1,8 @@
+﻿metric_key,metric_name_vi,group,unit,better_direction,evaluation_protocol,Faster_RCNN_ResNet50_FPN,YOLOv8s,notes
+mAP50_95,mAP tại IoU 0.50:0.05:0.95,Độ chính xác chính,0–1,Cao hơn,Cùng test split; pycocotools COCOeval; tọa độ ảnh gốc; score floor=0.001; maxDets=100.,,,Metric chính để so sánh; checkpoint chọn theo metric này trên validation.
+AP50,AP tại IoU 0.50,Độ chính xác,0–1,Cao hơn,Cùng test split; pycocotools COCOeval; tọa độ ảnh gốc; score floor=0.001; maxDets=100.,,,Một class nên tương đương mAP@50.
+precision,Precision,Kết quả tại ngưỡng vận hành,0–1,Cao hơn,Test split; ghép một-một tại IoU>=0.5; confidence riêng cho từng model chọn tối đa F1 trên validation rồi khóa.,,,TP/(TP+FP); đánh giá mức độ phát hiện nhầm.
+recall,Recall,Kết quả tại ngưỡng vận hành,0–1,Cao hơn,Test split; ghép một-một tại IoU>=0.5; confidence riêng cho từng model chọn tối đa F1 trên validation rồi khóa.,,,TP/(TP+FN); đặc biệt cần quan tâm vì bỏ sót Varroa.
+F1,F1-score,Kết quả tại ngưỡng vận hành,0–1,Cao hơn,Test split; ghép một-một tại IoU>=0.5; confidence riêng cho từng model chọn tối đa F1 trên validation rồi khóa.,,,2*Precision*Recall/(Precision+Recall).
+mean_IoU_TP,IoU trung bình của các cặp True Positive,Định vị,0–1,Cao hơn,Test split; ghép một-một tại IoU>=0.5; confidence riêng cho từng model chọn tối đa F1 trên validation rồi khóa.,,,Chỉ tính TP; đọc cùng Recall; không có TP thì ghi N/A.
+FPS,Số ảnh xử lý mỗi giây,Tốc độ,Ảnh/giây,Cao hơn,"Cùng một GPU T4; FP32; batch=1; 20 lượt warm-up; cùng 100 ảnh test; đồng bộ CUDA; gồm letterbox, H2D, model, NMS và đưa box về CPU; không gồm đọc file/giải mã ảnh.",,,FPS=1000/latency_mean_ms ở batch=1.

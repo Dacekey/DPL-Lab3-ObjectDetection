@@ -1,0 +1,30 @@
+{
+  "train": {
+    "images": 8223,
+    "boxes": 2903,
+    "positive_images": 2553,
+    "negative_images": 5670
+  },
+  "val": {
+    "images": 1876,
+    "boxes": 655,
+    "positive_images": 451,
+    "negative_images": 1425
+  },
+  "test": {
+    "images": 3408,
+    "boxes": 1068,
+    "positive_images": 942,
+    "negative_images": 2466
+  },
+  "checks": [
+    "all images decoded",
+    "source SHA-256 preserved",
+    "COCO references and bounds",
+    "YOLO to COCO round-trip < 1e-6 pixel",
+    "empty labels for negative images",
+    "unique IDs and paths",
+    "no orphan exported images or labels",
+    "no cross-split identical pixels"
+  ]
+}

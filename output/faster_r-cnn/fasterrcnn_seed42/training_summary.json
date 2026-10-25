@@ -1,0 +1,9 @@
+{
+  "seconds_this_session": 21998.543223499,
+  "completed_epochs": 22,
+  "best_mAP50_95": 0.30923595927278297,
+  "world_size": 2,
+  "global_batch": 8,
+  "seed": 42,
+  "resume_note": "Optimizer/scheduler/scaler restored; stochastic worker state is not guaranteed bit-identical after resume."
+}

@@ -1,0 +1,8 @@
+# Install a compatible torch/torchvision pair for your CPU or CUDA environment first.
+torch>=2.9
+torchvision>=0.24
+ultralytics==8.3.228
+pycocotools==2.0.11
+opencv-python>=4.8
+numpy>=1.26
+Pillow>=10

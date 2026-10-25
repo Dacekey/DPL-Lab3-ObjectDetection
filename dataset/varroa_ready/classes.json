@@ -1,0 +1,1 @@
+{"names": ["varroa"], "yolo": {"varroa": 0}, "coco": {"varroa": 1}, "torchvision": {"background": 0, "varroa": 1}, "training_seed": 42}

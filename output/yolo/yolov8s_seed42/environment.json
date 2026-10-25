@@ -1,0 +1,27 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "CUDA": "12.8",
+  "GPUs": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "packages": {
+    "pycocotools": "2.0.11",
+    "ultralytics": "8.3.228"
+  },
+  "annotation_sha256": {
+    "train": "c312ef1f7fa8be474107c902819703f5b241db98a5ddd1b4a024b838abd9d458",
+    "val": "d30d42baebbe1f08897b7141eb2a7d82325c543f6d96ce928090b484bc4c01af",
+    "test": "9b657345f5625a9263bbf2f3f55c8a86b71255ba0e4817f9c15fd52d6c233757"
+  },
+  "evaluator": "pycocotools",
+  "score_floor": 0.001,
+  "NMS_IoU": 0.5,
+  "max_detections": 100,
+  "precision_eval": "FP32",
+  "EMA": true,
+  "native_detection_kernels": true,
+  "normalization": "RGB / 255"
+}

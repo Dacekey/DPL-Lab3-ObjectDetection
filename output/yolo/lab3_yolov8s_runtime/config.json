@@ -1,0 +1,20 @@
+{
+  "root": "/kaggle/input/datasets/mthutranhehe/varroa",
+  "data_yaml": "/kaggle/working/lab3_yolov8s_runtime/data.yaml",
+  "output": "/kaggle/working/yolov8s_seed42",
+  "epochs": 100,
+  "patience": 15,
+  "batch": 8,
+  "gpus": 2,
+  "workers": 2,
+  "seed": 42,
+  "size": 640,
+  "amp": true,
+  "learning_rate": 0.01,
+  "warmup_epochs": 3,
+  "eval_batch": 4,
+  "eval_device": "cuda:0",
+  "benchmark_samples": 100,
+  "resume": null,
+  "weights": "/kaggle/working/lab3_yolov8s_runtime/yolov8s.pt"
+}

@@ -1,0 +1,5 @@
+{
+  "selected_on": "validation",
+  "rule": "maximum F1 at IoU=0.5; ties prefer higher confidence",
+  "threshold": 0.2831989824771881
+}

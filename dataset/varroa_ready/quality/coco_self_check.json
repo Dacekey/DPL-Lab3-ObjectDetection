@@ -1,0 +1,18 @@
+{
+  "train": {
+    "AP50_95": 1.0,
+    "AP50": 1.0,
+    "AP75": 1.0
+  },
+  "val": {
+    "AP50_95": 1.0,
+    "AP50": 1.0,
+    "AP75": 1.0
+  },
+  "test": {
+    "AP50_95": 1.0,
+    "AP50": 1.0,
+    "AP75": 1.0
+  },
+  "description": "Annotation format self-check with ground-truth boxes as oracle predictions, not trained-model performance."
+}

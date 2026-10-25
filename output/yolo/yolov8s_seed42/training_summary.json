@@ -1,0 +1,10 @@
+{
+  "seconds_this_session": 8476.347267169998,
+  "best_mAP50_95": 0.27405357360839844,
+  "completed_epochs": 44,
+  "world_size": 2,
+  "global_batch": 8,
+  "seed": 42,
+  "EMA": true,
+  "resume_note": "Native Ultralytics resume; stochastic worker state may differ after resume."
+}

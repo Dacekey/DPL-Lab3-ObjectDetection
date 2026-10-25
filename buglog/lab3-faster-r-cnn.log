@@ -1,0 +1,166 @@
+11.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.1s 3 0.00s - to python to disable frozen modules.
+11.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.8s 7 0.00s - to python to disable frozen modules.
+11.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+37.5s 9 torch: 2.11.0+cu128 torchvision: 0.26.0+cu128
+37.5s 10 0 Tesla T4
+37.5s 11 1 Tesla T4
+51.6s 12 train 8223 images; 2903 boxes
+52.4s 13 val 1876 images; 655 boxes
+53.5s 14 test 3408 images; 1068 boxes
+54.4s 15 Dataset: /kaggle/input/datasets/marcusnguyen007/varroa
+54.4s 16 Output: /kaggle/working/fasterrcnn_seed42
+54.4s 17 Writing /kaggle/working/lab3_fasterrcnn_runtime/common.py
+54.4s 18 Writing /kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py
+54.6s 19 Downloading: "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth" to /root/.cache/torch/hub/checkpoints/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
+54.6s 20 0%|          | 0.00/160M [00:00<?, ?B/s]
+54.7s 21 0%|          | 0.00/160M [00:00<?, ?B/s]  6%|▌         | 9.00M/160M [00:00<00:01, 94.3MB/s]
+54.8s 22 6%|▌         | 9.00M/160M [00:00<00:01, 94.3MB/s] 19%|█▊        | 29.9M/160M [00:00<00:00, 168MB/s]
+54.9s 23 19%|█▊        | 29.9M/160M [00:00<00:00, 168MB/s]  32%|███▏      | 51.4M/160M [00:00<00:00, 194MB/s]
+55.0s 24 32%|███▏      | 51.4M/160M [00:00<00:00, 194MB/s] 45%|████▍     | 71.9M/160M [00:00<00:00, 202MB/s]
+55.1s 25 45%|████▍     | 71.9M/160M [00:00<00:00, 202MB/s] 58%|█████▊    | 93.4M/160M [00:00<00:00, 210MB/s]
+55.2s 26 58%|█████▊    | 93.4M/160M [00:00<00:00, 210MB/s] 71%|███████▏  | 114M/160M [00:00<00:00, 211MB/s]
+55.3s 27 71%|███████▏  | 114M/160M [00:00<00:00, 211MB/s]  85%|████████▍ | 135M/160M [00:00<00:00, 215MB/s]
+55.4s 28 85%|████████▍ | 135M/160M [00:00<00:00, 215MB/s] 98%|█████████▊| 157M/160M [00:00<00:00, 219MB/s]
+55.4s 29 98%|█████████▊| 157M/160M [00:00<00:00, 219MB/s]100%|██████████| 160M/160M [00:00<00:00, 206MB/s]
+55.6s 30 100%|██████████| 160M/160M [00:00<00:00, 206MB/s]
+55.6s 31 
+55.6s 32 
+56.5s 33 /usr/bin/python3 -m torch.distributed.run --standalone --nproc_per_node=2 /kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py --config /kaggle/working/lab3_fasterrcnn_runtime/gpu_smoke_config.json
+58.3s 34 
+58.3s 35 *****************************************
+58.3s 36 Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+58.3s 37 *****************************************
+62.8s 38 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+62.8s 39 return func(*args, **kwargs)
+62.8s 40 [rank0]:[W1023 04:48:06.497525542 ProcessGroupNCCL.cpp:5188] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+74.5s 41 epoch 1/1 step 0/1 loss=0.7628
+85.9s 42 {"epoch": 1, "train_loss": 0.8382905721664429, "val_mAP50_95": 0.000258948971820259, "val_AP50": 0.00258948971820259, "val_AP75": 0.0, "learning_rate": 5e-05, "train_peak_VRAM_MB": 2203.255859375, "epoch_seconds": 20.948433376000025, "loss_classifier": 0.716833233833313, "loss_box_reg": 0.0007365839555859566, "loss_objectness": 0.04180019721388817, "loss_rpn_box_reg": 0.0034382189624011517}
+89.1s 43 GPU preflight passed. Bắt đầu training đầy đủ ở cell tiếp theo.
+89.1s 44 /usr/bin/python3 -m torch.distributed.run --standalone --nproc_per_node=2 /kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py --config /kaggle/working/lab3_fasterrcnn_runtime/config.json
+90.8s 45 
+90.8s 46 *****************************************
+90.8s 47 Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+90.8s 48 *****************************************
+94.9s 49 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+94.9s 50 return func(*args, **kwargs)
+94.9s 51 [rank0]:[W1023 04:48:38.639282265 ProcessGroupNCCL.cpp:5188] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+104.2s 52 epoch 1/100 step 0/1028 loss=0.7829
+135.1s 53 epoch 1/100 step 100/1028 loss=0.0680
+166.4s 54 epoch 1/100 step 200/1028 loss=0.1514
+198.9s 55 epoch 1/100 step 300/1028 loss=0.0728
+232.5s 56 epoch 1/100 step 400/1028 loss=0.0493
+265.2s 57 epoch 1/100 step 500/1028 loss=0.0593
+298.0s 58 epoch 1/100 step 600/1028 loss=0.1807
+330.8s 59 epoch 1/100 step 700/1028 loss=0.0169
+363.6s 60 epoch 1/100 step 800/1028 loss=0.0103
+378.3s 61 [rank1]: Traceback (most recent call last):
+378.3s 62 [rank1]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 209, in <module>
+378.3s 63 [rank1]:     main()
+378.3s 64 [rank1]:     ~~~~^^
+378.3s 65 [rank1]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 205, in main
+378.3s 66 [rank1]:     train(config)
+378.3s 67 [rank1]:     ~~~~~^^^^^^^^
+378.3s 68 [rank1]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 130, in train
+378.3s 69 [rank1]:     raise RuntimeError(f"Non-finite loss at epoch={epoch+1}, step={step}; abort all ranks")
+378.3s 70 [rank1]: RuntimeError: Non-finite loss at epoch=1, step=841; abort all ranks
+378.3s 71 [rank0]: Traceback (most recent call last):
+378.3s 72 [rank0]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 209, in <module>
+378.3s 73 [rank0]:     main()
+378.3s 74 [rank0]:     ~~~~^^
+378.3s 75 [rank0]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 205, in main
+378.3s 76 [rank0]:     train(config)
+378.3s 77 [rank0]:     ~~~~~^^^^^^^^
+378.3s 78 [rank0]:   File "/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py", line 130, in train
+378.3s 79 [rank0]:     raise RuntimeError(f"Non-finite loss at epoch={epoch+1}, step={step}; abort all ranks")
+378.3s 80 [rank0]: RuntimeError: Non-finite loss at epoch=1, step=841; abort all ranks
+378.6s 81 [rank0]:[W1023 04:53:22.294451613 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+379.4s 82 W1023 04:53:23.329000 121 torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 129 closing signal SIGTERM
+379.7s 83 E1023 04:53:23.648000 121 torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 1 (pid: 130) of binary: /usr/bin/python3
+379.7s 84 Traceback (most recent call last):
+379.7s 85 File "<frozen runpy>", line 203, in _run_module_as_main
+379.7s 86 File "<frozen runpy>", line 88, in _run_code
+379.7s 87 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py", line 994, in <module>
+379.7s 88 main()
+379.7s 89 ~~~~^^
+379.7s 90 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+379.7s 91 return f(*args, **kwargs)
+379.7s 92 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py", line 990, in main
+379.7s 93 run(args)
+379.7s 94 ~~~^^^^^^
+379.7s 95 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py", line 981, in run
+379.7s 96 elastic_launch(
+379.7s 97 ~~~~~~~~~~~~~~~
+379.7s 98 config=config,
+379.7s 99 ~~~~~~~~~~~~~~
+379.7s 100 entrypoint=cmd,
+379.7s 101 ~~~~~~~~~~~~~~~
+379.7s 102 )(*cmd_args)
+379.7s 103 ~^^^^^^^^^^^
+379.7s 104 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+379.7s 105 return launch_agent(self._config, self._entrypoint, list(args))
+379.7s 106 File "/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+379.7s 107 raise ChildFailedError(
+379.7s 108 ...<2 lines>...
+379.7s 109 )
+379.7s 110 torch.distributed.elastic.multiprocessing.errors.ChildFailedError:
+379.7s 111 ============================================================
+379.8s 112 /kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py FAILED
+379.8s 113 ------------------------------------------------------------
+379.8s 114 Failures:
+379.8s 115 [1]:
+379.8s 116 time      : 2026-10-23_04:53:23
+379.8s 117 host      : e8497cfbecd6
+379.8s 118 rank      : 0 (local_rank: 0)
+379.8s 119 exitcode  : -15 (pid: 129)
+379.8s 120 error_file: <N/A>
+379.8s 121 traceback : Signal 15 (SIGTERM) received by PID 129
+379.8s 122 ------------------------------------------------------------
+379.8s 123 Root Cause (first observed failure):
+379.8s 124 [0]:
+379.8s 125 time      : 2026-10-23_04:53:23
+379.8s 126 host      : e8497cfbecd6
+379.8s 127 rank      : 1 (local_rank: 1)
+379.8s 128 exitcode  : 1 (pid: 130)
+379.8s 129 error_file: <N/A>
+379.8s 130 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+379.8s 131 ============================================================
+381.1s 132 Traceback (most recent call last):
+381.1s 133 File "<string>", line 1, in <module>
+381.1s 134 import sys;import papermill as pm;pm.execute_notebook("__notebook__.ipynb","__notebook__.ipynb",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)
+381.1s 135 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+381.1s 136 File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 131, in execute_notebook
+381.1s 137 raise_for_execution_errors(nb, output_path)
+381.1s 138 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+381.1s 139 File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+381.1s 140 raise error
+381.1s 141 papermill.exceptions.PapermillExecutionError:
+381.1s 142 ---------------------------------------------------------------------------
+381.1s 143 Exception encountered at "In [9]":
+381.1s 144 ---------------------------------------------------------------------------
+381.1s 145 CalledProcessError                        Traceback (most recent call last)
+381.1s 146 /tmp/ipykernel_22/2852274028.py in <cell line: 0>()
+381.1s 147 3 if not RESUME_CHECKPOINT and any((OUTPUT/name).exists() for name in ("best.pt","last.pt","weights/best.pt","weights/last.pt")):
+381.1s 148 4     raise RuntimeError("Output đã có checkpoint. Chọn OUTPUT mới hoặc đặt RESUME_CHECKPOINT=last.pt.")
+381.1s 149 ----> 5 run_command([sys.executable,"-m","torch.distributed.run","--standalone",
+381.1s 150 6     f"--nproc_per_node={GPUS}",RUNTIME/'fasterrcnn_train.py',"--config",CONFIG_PATH])
+381.1s 151 
+381.1s 152 /tmp/ipykernel_22/2882502773.py in run_command(command, env)
+381.1s 153 35     status=process.wait()
+381.1s 154 36     if status:
+381.1s 155 ---> 37         raise subprocess.CalledProcessError(status,command)
+381.1s 156 
+381.1s 157 CalledProcessError: Command '['/usr/bin/python3', '-m', 'torch.distributed.run', '--standalone', '--nproc_per_node=2', PosixPath('/kaggle/working/lab3_fasterrcnn_runtime/fasterrcnn_train.py'), '--config', PosixPath('/kaggle/working/lab3_fasterrcnn_runtime/config.json')]' returned non-zero exit status 1.
+381.1s 158 
+383.4s 159 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+383.4s 160 cells[i][c] = re.sub('\\\\\|', '|', cell)
+383.6s 161 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+383.6s 162 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+384.4s 163 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+384.5s 164 [NbConvertApp] Writing 70706 bytes to __notebook__.ipynb
+386.9s 165 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+387.5s 166 [NbConvertApp] Writing 500193 bytes to __results__.html

@@ -1,0 +1,20 @@
+{
+  "root": "/kaggle/working/lab3_yolov8s_runtime/gpu_smoke_data",
+  "data_yaml": "/kaggle/working/lab3_yolov8s_runtime/gpu_smoke_data/data.yaml",
+  "output": "/kaggle/working/lab3_yolov8s_runtime/gpu_smoke_run",
+  "epochs": 1,
+  "patience": 1,
+  "batch": 8,
+  "gpus": 2,
+  "workers": 2,
+  "seed": 42,
+  "size": 640,
+  "amp": true,
+  "learning_rate": 0.01,
+  "warmup_epochs": 0,
+  "eval_batch": 4,
+  "eval_device": "cuda:0",
+  "benchmark_samples": 100,
+  "resume": null,
+  "weights": "/kaggle/working/lab3_yolov8s_runtime/yolov8s.pt"
+}
