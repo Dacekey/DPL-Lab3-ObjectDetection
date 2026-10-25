@@ -1,0 +1,23 @@
+[
+  {
+    "figure": "qualitative_1.png",
+    "image_id": 10111,
+    "file_name": "images/test/2017-09-01_10-54-26/2017-09-01_10-54-26.mp4-bee_id_7755-2385-1.png",
+    "case": "Faster R-CNN recovers a missed object",
+    "selection": "first image satisfying the case in original test image order"
+  },
+  {
+    "figure": "qualitative_2.png",
+    "image_id": 10105,
+    "file_name": "images/test/2017-09-01_10-54-26/2017-09-01_10-54-26.mp4-bee_id_7746-810-1.png",
+    "case": "False alarm on an annotated negative",
+    "selection": "first image satisfying the case in original test image order"
+  },
+  {
+    "figure": "qualitative_3.png",
+    "image_id": 10102,
+    "file_name": "images/test/2017-09-01_10-54-26/2017-09-01_10-54-26.mp4-bee_id_7743-390-1.png",
+    "case": "Both models miss the annotated object",
+    "selection": "first image satisfying the case in original test image order"
+  }
+]

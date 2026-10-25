@@ -6,26 +6,26 @@ Chạy trên ảnh mới hoặc một thư mục ảnh, không cần annotation.
 Cài dependency trong môi trường Python đang sử dụng:
 
 ```bash
-python -m pip install -r labs/Lab-3_ObjectDetection/inference/requirements.txt
+python -m pip install -r inference/requirements.txt
 ```
 
 Cần cặp torch/torchvision tương thích với nhau và với CPU/CUDA của máy. Các checkpoint
 Kaggle gốc dùng torch 2.11.0, torchvision 0.26.0, Ultralytics 8.3.228. Kiểm tra local
 trên CPU dùng torch 2.9.1 và torchvision 0.24.1; có thể có sai khác số học nhỏ với T4.
 
-Chạy từ thư mục gốc repository (đổi `--source` thành ảnh/thư mục của bạn):
+Chạy từ thư mục gốc repo Lab 3 (đổi `--source` thành ảnh/thư mục của bạn):
 
 ```bash
-python labs/Lab-3_ObjectDetection/inference/predict.py \
-  --source labs/Lab-3_ObjectDetection/dataset/varroa_ready/images/test \
+python inference/predict.py \
+  --source dataset/varroa_ready/images/test \
   --model both --limit 8
 ```
 
 Chạy riêng từng model:
 
 ```bash
-python labs/Lab-3_ObjectDetection/inference/predict.py --source /path/to/image.jpg --model fasterrcnn
-python labs/Lab-3_ObjectDetection/inference/predict.py --source /path/to/images --model yolov8s --device cpu
+python inference/predict.py --source /path/to/image.jpg --model fasterrcnn
+python inference/predict.py --source /path/to/images --model yolov8s --device cpu
 ```
 
 `--device auto` tự chọn CUDA nếu có, ngược lại CPU. `--output` mặc định là `inference/results`.

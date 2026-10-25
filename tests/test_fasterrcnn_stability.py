@@ -58,7 +58,7 @@ def test_training_always_closes_process_group(monkeypatch, fail):
 
 def test_fp32_real_positive_and_all_negative_batches(tmp_path):
     root = Path(__file__).resolve().parents[1] / "dataset/varroa_ready"
-    if not root.exists():
+    if not (root / "images/train").is_dir():
         pytest.skip("Prepared local dataset unavailable")
     torch.set_num_threads(2)
     torch.manual_seed(42)

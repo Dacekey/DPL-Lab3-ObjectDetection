@@ -60,7 +60,7 @@ def test_perfect_coco_predictions(annotation):
 
 def test_actual_dataset_negative_and_yolo_batch():
     root=Path(__file__).resolve().parents[1]/"dataset/varroa_ready"
-    if not root.exists():
+    if not (root / "images/train").is_dir():
         pytest.skip("Prepared local dataset unavailable")
     d=CocoDataset(root,"train",128)
     pos=next(i for i,im in enumerate(d.images) if d.annotations[im["id"]])
@@ -89,7 +89,7 @@ def test_primary_metrics_match_user_csv():
 
 def test_spawn_dataloader_and_gpu_smoke_subset(tmp_path):
     root=Path(__file__).resolve().parents[1]/"dataset/varroa_ready"
-    if not root.exists():
+    if not (root / "images/train").is_dir():
         pytest.skip("Prepared local dataset unavailable")
     config={"root":str(root),"batch":8,"output":"unused","resume":"unused"}
     path=prepare_gpu_smoke_config(config,tmp_path)
